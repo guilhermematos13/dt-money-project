@@ -43,7 +43,7 @@ export const Content = styled(Dialog.Content)`
   button[type="submit"] {
     height: 58px;
     border-radius: 6px;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     border: 0;
     background: ${props => props.theme["blue-500"]};
     color: ${props => props.theme.white};
@@ -67,3 +67,32 @@ right: 1.5rem;
 cursor: pointer;
 color: ${props => props.theme["gray-500"]};
 `
+
+export const TransactionType = styled.div`
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap:1rem;
+margin-top: 0.5rem;
+`
+interface TransactionTypeButtonProps {
+  variant: 'income' | 'outcome';
+}
+
+export const TransactionTypeButton = styled.button<TransactionTypeButtonProps>`
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0.5rem;
+color: ${props => props.theme["gray-300"]};
+padding: 1rem;
+border: 0;
+border-radius:6px;
+background-color: ${props => props.theme["gray-700"]};
+
+cursor: pointer;
+
+svg {
+  color: ${props => props.variant === 'income' ? props.theme["blue-500"] : props.theme["red-300"]}
+}
+`
+
