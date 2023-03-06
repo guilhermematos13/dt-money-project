@@ -32,7 +32,12 @@ button {
     color: ${props => props.theme["blue-300"]};
     font-weight: bold;
 
-    &:hover {
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
         background: ${props => props.theme["blue-500"]};
         border: 1px solid ${props => props.theme["blue-500"]};
         color: ${props => props.theme.white};
