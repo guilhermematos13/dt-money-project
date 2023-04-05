@@ -71,6 +71,14 @@
       "type": "outcome",
       "createdAt": "2023-03-07T04:38:09.407Z",
       "id": 9
+    },
+    {
+      "description": "Desenvolvimento de App",
+      "price": 1000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2023-03-30T18:03:44.636Z",
+      "id": 10
     }
   ]
 }
